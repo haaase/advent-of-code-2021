@@ -3,7 +3,7 @@ import java.nio.file.{Path}
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
 
-object CMD extends IOApp:
+object CLI extends IOApp:
     val dayOpt: Opts[Int] = Opts.argument[Int](metavar = "DAY")
     val fileOpt: Opts[Path] = Opts.argument[Path](metavar = "INPUT-FILE")
     // program

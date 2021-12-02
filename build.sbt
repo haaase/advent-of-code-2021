@@ -12,5 +12,5 @@ lazy val root = (project in file("."))
     // "--report-unsupported-elements-at-runtime", // makes application crash in certain cases
     ))
   .enablePlugins(NativeImagePlugin)
-  .settings(Compile / mainClass := Some("CMD"))
+  .settings(Compile / mainClass := Some("CLI"))
 //   .dependsOn(scala_2_13)
