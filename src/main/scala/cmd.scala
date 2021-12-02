@@ -26,6 +26,7 @@ object CMD extends IOApp:
                     // determine program to run
                     val prog = day match
                         case 1 => day1.getSolution(path).attempt
+                        case 2 => day2.getSolution(path).attempt
                         case _ =>
                             IO.pure(
                               Left(
