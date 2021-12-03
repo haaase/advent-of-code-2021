@@ -18,7 +18,7 @@ object day1 extends IOApp.Simple with AoCSolution {
 
     def getSolution(inputFile: Path): IO[(Int, Int)] =
         for
-            input <- read_input(inputFile)
+            input <- read_input(inputFile).map(_.toList)
             numbers = input.map(_.toInt)
             solution1 = countIncreases(numbers)
             slidingWindow = buildSlidingWindow(numbers)

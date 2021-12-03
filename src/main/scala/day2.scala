@@ -49,7 +49,7 @@ object day2 extends IOApp.Simple with AoCSolution {
 
     def getSolution(inputFile: Path): IO[(Int, Int)] =
         for
-            input <- read_input(inputFile)
+            input <- read_input(inputFile).map(_.toList)
             steps = parseInput(input)
             position1 = calcPosition1(Position(0, 0, 0), steps)
             solution1 = position1.x * position1.y
