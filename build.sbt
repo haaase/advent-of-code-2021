@@ -2,6 +2,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "aoc-21",
     scalaVersion := "3.1.0",
+    scalacOptions += "-Xfatal-warnings", // fail on warnings
     libraryDependencies += "org.typelevel" %% "cats-core"         % "2.6.1",
     libraryDependencies += "org.typelevel" %% "cats-effect"       % "3.2.9",
     libraryDependencies += "com.monovore"  %% "decline"           % "2.2.0",

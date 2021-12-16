@@ -2,6 +2,7 @@ import cats.effect.{IO, IOApp}
 import java.nio.file.{Path, Paths}
 import scala.language.implicitConversions
 import cats.kernel.Monoid
+import scala.annotation.tailrec
 
 object day3 extends IOApp.Simple with AoCSolution {
 
@@ -35,6 +36,7 @@ object day3 extends IOApp.Simple with AoCSolution {
         numbers: List[Seq[Bit]],
         f: (Seq[Bit] => Bit)
     ): Seq[Bit] =
+        @tailrec
         def findNumber(nums: List[Seq[Bit]], bitPos: Int): Seq[Bit] =
             nums match
                 case n :: Nil => n
