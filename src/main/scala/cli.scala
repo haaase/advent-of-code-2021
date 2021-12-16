@@ -28,6 +28,7 @@ object CLI extends IOApp:
                         case 1 => day1.getSolution(path).attempt
                         case 2 => day2.getSolution(path).attempt
                         case 3 => day3.getSolution(path).attempt
+                        case 4 => day4.getSolution(path).attempt
                         case _ =>
                             IO.pure(
                               Left(
